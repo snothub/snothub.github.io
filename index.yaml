@@ -1,14 +1,14 @@
 apiVersion: v1
 entries:
-  nginx:
-    - created: 2016-10-06T16:23:20.499543808-06:00
-      description: Create a basic nginx HTTP server
-      digest: aaff4545f79d8b2913a10cb400ebb6fa9c77fe813287afbacf1a0b897cdffffff
-      home: https://helm.sh/helm
-      name: nginx
-      sources:
-      - https://github.com/helm/charts
-      urls:
-      - https://technosophos.github.io/tscharts/nginx-1.1.0.tgz
-      version: 1.1.0
-generated: 2016-10-06T16:23:20.499029981-06:00
+  loadtest-infra:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-06-12T15:22:57.0419296+02:00"
+    description: k6 load testing infrastructure
+    digest: 7baad8e39cd24248480422a2b81e849eea75b6ebe3ea34e28ecc79b7d0d19edb
+    name: loadtest-infra
+    type: application
+    urls:
+    - https://snothub.github.io/loadtest-infra-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-06-12T15:22:57.0408721+02:00"
