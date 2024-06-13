@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "loadtest-infra.fullname" . }}-grafana
+  namespace: {{ .Release.Namespace }}
   labels:
     app.kubernetes.io/name: {{ include "loadtest-infra.name" . }}-grafana
     app.kubernetes.io/instance: {{ .Release.Name }}-grafana
@@ -41,8 +42,24 @@ spec:
             - name: http
               containerPort: {{ .Values.grafana.port }}
               protocol: TCP
+          env:
+          - name: GF_AUTH_ANONYMOUS_ORG_ROLE
+            value: "Admin"
+          - name: GF_AUTH_ANONYMOUS_ENABLED
+            value: "true"
+          - name: GF_AUTH_BASIC_ENABLED
+            value: "false"
+          - name: GF_SERVER_SERVE_FROM_SUB_PATH
+            value: "true"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+          - name: config-dashboards
+            mountPath: /var/lib/grafana/dashboards
+          - name: config-datasource
+            mountPath: /etc/grafana/provisioning/datasources
+          - name: config-dash
+            mountPath: /etc/grafana/provisioning/dashboards
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -55,3 +72,13 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      volumes:
+      - name: config-dashboards
+        configMap: 
+          name: {{ .Release.Name }}-cm-gr
+      - name: config-datasource
+        configMap: 
+          name: {{ .Release.Name }}-cm-grdata
+      - name: config-dash
+        configMap: 
+          name: {{ .Release.Name }}-cm-grdash

@@ -1,6 +1,7 @@
 apiVersion: v2
 name: loadtest-infra
 description: k6 load testing infrastructure
+icon: https://raw.githubusercontent.com/grafana/grafana/36fa54a28887679e006b5744f0ad6e63b8d857c3/public/img/logo_transparent_400x.png
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -15,7 +16,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.1.7
+version: 0.2.0
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
