@@ -43,6 +43,7 @@ db:
   replicas: 1
   image: influxdb:1.8
   port: 8086
+  name: "K6"
 grafana:
   replicas: 1
   image: grafana/grafana:8.5.21

@@ -41,6 +41,9 @@ spec:
             - name: http
               containerPort: {{ .Values.db.port }}
               protocol: TCP
+          env:
+          - name: INFLUXDB_DB
+            value: "{{ .Values.db.name }}"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
