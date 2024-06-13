@@ -37,8 +37,8 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: NodePort
-  port: 30010
+  type: LoadBalancer
+  port: 3010
 db:
   replicas: 1
   image: influxdb:1.8
