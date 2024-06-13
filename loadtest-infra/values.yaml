@@ -38,7 +38,7 @@ securityContext: {}
 
 service:
   type: NodePort
-  port: 3010
+  port: 30010
 db:
   replicas: 1
   image: influxdb:1.8
