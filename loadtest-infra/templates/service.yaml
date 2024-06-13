@@ -7,9 +7,9 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.grafana.port }}
+    - port: {{ .Values.service.port }}
       targetPort: {{ .Values.grafana.port }}
-      nodePort: {{ .Values.service.port }}
+      protocol: TCP
   selector:
     app.kubernetes.io/name: {{ include "loadtest-infra.name" . }}-grafana
     app.kubernetes.io/instance: {{ .Release.Name }}-grafana
