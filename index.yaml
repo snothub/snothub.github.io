@@ -3,12 +3,22 @@ entries:
   loadtest-infra:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-06-12T15:22:57.0419296+02:00"
+    created: "2024-06-13T09:39:25.6088101+02:00"
     description: k6 load testing infrastructure
-    digest: 7baad8e39cd24248480422a2b81e849eea75b6ebe3ea34e28ecc79b7d0d19edb
+    digest: e4475322d4e330b7d1f7c54a707a99dce3e5e96294b01d3ad308cdeda5018e71
+    name: loadtest-infra
+    type: application
+    urls:
+    - https://snothub.github.io/loadtest-infra-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-06-13T09:39:25.6077706+02:00"
+    description: k6 load testing infrastructure
+    digest: 611ae249f9cf3f33df5283fdfcf244dabd4ac706a83128043be6f89a825f95b8
     name: loadtest-infra
     type: application
     urls:
     - https://snothub.github.io/loadtest-infra-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-12T15:22:57.0408721+02:00"
+generated: "2024-06-13T09:39:25.6066928+02:00"
