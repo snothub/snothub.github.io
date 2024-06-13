@@ -35,19 +35,10 @@ Common labels
 */}}
 {{- define "loadtest-infra.labels" -}}
 helm.sh/chart: {{ include "loadtest-infra.chart" . }}
-{{ include "loadtest-infra.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
-{{- end }}
-
-{{/*
-Selector labels
-*/}}
-{{- define "loadtest-infra.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "loadtest-infra.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*

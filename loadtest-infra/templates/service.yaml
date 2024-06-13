@@ -11,4 +11,5 @@ spec:
       targetPort: {{ .Values.grafana.port }}
       nodePort: {{ .Values.service.port }}
   selector:
-    {{- include "loadtest-infra.selectorLabels" . | nindent 4 }}
+    app.kubernetes.io/name: {{ include "loadtest-infra.name" . }}-grafana
+    app.kubernetes.io/instance: {{ .Release.Name }}-grafana

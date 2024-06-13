@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: {{ include "loadtest-infra.fullname" . }}-grafana
   labels:
+    app.kubernetes.io/name: {{ include "loadtest-infra.name" . }}-grafana
+    app.kubernetes.io/instance: {{ .Release.Name }}-grafana
     {{- include "loadtest-infra.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
@@ -10,7 +12,8 @@ spec:
   {{- end }}
   selector:
     matchLabels:
-      {{- include "loadtest-infra.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/name: {{ include "loadtest-infra.name" . }}-grafana
+      app.kubernetes.io/instance: {{ .Release.Name }}-grafana
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,7 +21,8 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "loadtest-infra.selectorLabels" . | nindent 8 }}
+        app.kubernetes.io/name: {{ include "loadtest-infra.name" . }}-grafana
+        app.kubernetes.io/instance: {{ .Release.Name }}-grafana
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
