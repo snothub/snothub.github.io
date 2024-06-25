@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "loadtest-infra.fullname" . }}-grafana
+  name: {{ include "loadtest-infra.fullname" . }}-grafana-depl
   namespace: {{ .Release.Namespace }}
   labels:
-    app.kubernetes.io/name: {{ include "loadtest-infra.name" . }}-grafana
-    app.kubernetes.io/instance: {{ .Release.Name }}-grafana
+    app.kubernetes.io/name: {{ include "loadtest-infra.name" . }}-grafana-depl
+    app.kubernetes.io/instance: {{ .Release.Name }}-grafana-depl
     {{- include "loadtest-infra.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
@@ -38,6 +38,7 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.grafana.image }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+#          command: ["nslookup","19.1.10.1"]
           ports:
             - name: http
               containerPort: {{ .Values.grafana.port }}
