@@ -3,9 +3,31 @@ entries:
   loadtest-infra:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-06-14T14:06:19.2083929+02:00"
+    created: "2024-06-25T15:56:19.7824478+02:00"
     description: k6 load testing infrastructure
-    digest: a90ec909a36b417431f4c5c0646f7f23aa52a455bf017de902fd55fdfc81241c
+    digest: 0d43e924c3a4cf409043dda0b88d14f6f58f2f7c16508dd33237054ef6927316
+    icon: https://raw.githubusercontent.com/grafana/grafana/36fa54a28887679e006b5744f0ad6e63b8d857c3/public/img/logo_transparent_400x.png
+    name: loadtest-infra
+    type: application
+    urls:
+    - https://snothub.github.io/loadtest-infra-0.4.2.tgz
+    version: 0.4.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-06-25T15:56:19.7806976+02:00"
+    description: k6 load testing infrastructure
+    digest: a65b8f5d0c96ddc07b2f196167e20eb0387641e6169663f4b15a52d1d733685d
+    icon: https://raw.githubusercontent.com/grafana/grafana/36fa54a28887679e006b5744f0ad6e63b8d857c3/public/img/logo_transparent_400x.png
+    name: loadtest-infra
+    type: application
+    urls:
+    - https://snothub.github.io/loadtest-infra-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-06-25T15:56:19.780177+02:00"
+    description: k6 load testing infrastructure
+    digest: 775b053d6566cc460ff29b86510cd2556136f11b0c4aaeb2c7bb413bb28c7078
     icon: https://raw.githubusercontent.com/grafana/grafana/36fa54a28887679e006b5744f0ad6e63b8d857c3/public/img/logo_transparent_400x.png
     name: loadtest-infra
     type: application
@@ -14,7 +36,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-06-14T14:06:19.2083929+02:00"
+    created: "2024-06-25T15:56:19.7791345+02:00"
     description: k6 load testing infrastructure
     digest: e0c6c5d971e0236b4e944acf2778135c4d8e761d5ab774b32283339f909c75d1
     icon: https://raw.githubusercontent.com/grafana/grafana/36fa54a28887679e006b5744f0ad6e63b8d857c3/public/img/logo_transparent_400x.png
@@ -25,7 +47,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-06-14T14:06:19.2029193+02:00"
+    created: "2024-06-25T15:56:19.7786117+02:00"
     description: k6 load testing infrastructure
     digest: a60d8d576982863923d7576ea9f19efaf5e42c2e0edda9735338e125b25c9489
     icon: https://raw.githubusercontent.com/grafana/grafana/36fa54a28887679e006b5744f0ad6e63b8d857c3/public/img/logo_transparent_400x.png
@@ -36,7 +58,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-06-14T14:06:19.195598+02:00"
+    created: "2024-06-25T15:56:19.7775903+02:00"
     description: k6 load testing infrastructure
     digest: 798eab2dd48f43f6a7b985426eadff0bfb12b7adf6067b91a786f5ac075aaa55
     icon: https://raw.githubusercontent.com/grafana/grafana/36fa54a28887679e006b5744f0ad6e63b8d857c3/public/img/logo_transparent_400x.png
@@ -45,4 +67,4 @@ entries:
     urls:
     - https://snothub.github.io/loadtest-infra-0.2.0.tgz
     version: 0.2.0
-generated: "2024-06-14T14:06:19.1870746+02:00"
+generated: "2024-06-25T15:56:19.7764953+02:00"
